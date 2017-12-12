@@ -8,7 +8,14 @@ export class InterfaceClass {
 }
 export class InterfacePrototype{}
 export function Interface(...interfaces){
-	return class extends InterfacePrototype {
+	let name;
+	if(typeof interfaces[0] === 'string' || typeof interfaces[0] === 'symbol'){
+		name = interfaces.shift();
+	}
+	else{
+		name = Symbol();
+	}
+	return class InterfaceClassIntance extends InterfacePrototype {
 		static [Symbol.hasInstance](instance){
 			return interfaces.some( interfaceDef => {
 				if(interfaceDef instanceof InterfaceClass){
@@ -23,6 +30,15 @@ export function Interface(...interfaces){
 		}
 		static getInterfaces(){
 			return interfaces;
+		}
+		static getName(){
+			return name;
+		}
+		static setName(v){
+			name = v;
+		}
+		static toString(){
+			return name;
 		}
 	};
 }
