@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redcatjs/interface-prototype.git"
+    "url": "git+https://github.com/di-ninja/interface-prototype.git"
   },
   "keywords": [
     "interface",
@@ -28,9 +28,9 @@
   "author": "Jo <jo@redcat.ninja> (https://redcat.ninja)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/redcatjs/interface-prototype/issues"
+    "url": "https://github.com/di-ninja/interface-prototype/issues"
   },
-  "homepage": "https://github.com/redcatjs/interface-prototype#readme",
+  "homepage": "https://github.com/di-ninja/interface-prototype#readme",
   "devDependencies": {
     "babel-cli": "^7.0.0-beta.3",
     "babel-loader": "^7.1.2",
@@ -48,5 +48,10 @@
     "sinon": "^4.1.2",
     "webpack": "^3.9.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist",
+    "browser.js",
+    "browser.js.map"
+  ]
 }
